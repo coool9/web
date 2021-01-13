@@ -36,6 +36,7 @@ function parseDir(filename) {
     // it's a directory inside `docs` folder
     else {
       info.type = "category";
+      info.path = filename.replace("..", "");
       let catName = path.basename(filename);
 
       if (catName[0] == "_") {
