@@ -24,11 +24,11 @@ Naun mawaad add karanr thoro wadheek pecheeda ahe. Tawhan bin tareekn san kare s
 
 ### GitHub Interface
 
-When browsing a directory on GitHub, there's an Add file button on the top right corner of the file list:
+GitHub mn ka directory disande, Hik Add file button ahe mathen saji kund mn:
 
 ![Add file button](https://assets.open.mp/assets/images/contributing/add-new-file.png)
 
-You can either upload a Markdown file you've written already or write it directly into the GitHub text editor.
+Tawhan ya t ka Markdown file upload karyo jeka tawhan agen ee likhi huje ya direct GitHub text editor mn likho.
 
 File wt _zaroor_ `.md` extension ain Markdown huje. Markdown laye wadheek maloomat laye diso [hi guide](https://guides.github.com/features/mastering-markdown/).
 
@@ -42,7 +42,7 @@ Je tawhan khe Git istemaal karnri ahe t sirf clone karyo hin Wiki repository khe
 git clone https://github.com/openmultiplayer/web.git
 ```
 
-Open it in your favourite editor. I recommend Visual Studio Code as it has some great tooling for editing and formatting Markdown files. As you can see, I'm writing this using Visual Studio Code!
+Pehnje favourite editor mn kholyo. Aun Visual Studio Code recommend tho karyan chho jo inhen men suthi tooling ahe editing ain formatting laye markdown files ji. Jien ta tawhan disi sagho tha aun b istemal pyo karan Visual Studio Code!
 
 ![Visual Studio Code markdown preview](https://assets.open.mp/assets/images/contributing/vscode.png)
 
@@ -55,21 +55,21 @@ Aun ba extension recommend tho karyan pehnjo experience solo karanr laye:
 
 ### Internal Links
 
-Don't use absolute URLs for inter-site links. Use relative paths.
+Absolute URLs inter-site links laye istemaal na karyo. relative paths istemaal karyo.
 
 - ❌
 
   ```md
-  To be used with [OnPlayerClickPlayer](https://www.open.mp/docs/scripting/callbacks/OnPlayerClickPlayer)
+  Istemaal thindo [OnPlayerClickPlayer](https://www.open.mp/docs/scripting/callbacks/OnPlayerClickPlayer) san
   ```
 
 - ✔
 
   ```md
-  To be used with [OnPlayerClickPlayer](../callbacks/OnPlayerClickPlayer)
+  Istemaal thindo [OnPlayerClickPlayer](../callbacks/OnPlayerClickPlayer) san
   ```
 
-`../` means "go up one directory" so if the file you're editing is inside the `functions` directory and you're linking to `callbacks` you use `../` to go up to `scripting/` then `callbacks/` to enter the callbacks directory, then the filename (without `.md`) of the callback you want to link.
+`../` matlab "hik directory mathe wanjo" t je ka file tawhan edit pya karo `functions` directory men ahe ain tawhan link tha karyo `callbacks` tawhan istemal kanda `../` mathe `scripting/` poe `callbacks/` callbacks directory men enter thiyanr laye, poe filename (bighair `.md`) unhe callback jo jeko tawhan link karanr tha chahyo.
 
 ### Images
 
@@ -79,30 +79,30 @@ If in doubt, read another page that uses images and copy how its done there.
 
 ### Metadata
 
-The first thing in _any_ document here should be metadata:
+Pehrin shaye _kehn b_ document men hujanr khape Metadata:
 
 ```mdx
 ---
-title: My Documentation
-sidebar_label: My Documentation
-description: This is a page about stuff and things and burgers, yay!
+title: Muhnjo Documentation
+sidebar_label: Muhnjo Documentation
+description: Hi page ahe kujh shayun ain burgern je baare men!
 ---
 ```
 
-Every page should include a title and a description.
+Hr page khe title ain description zaroor huje.
 
-For a full list of what can go between the `---`, check out [the Docusaurus documentation](https://docusaurus.io/docs/markdown-features#markdown-headers).
+Poori list ta chha chha `---`, men achi saghe tho, diso [Docusaurus ji documentation](https://docusaurus.io/docs/markdown-features#markdown-headers).
 
 ### Headings
 
-Don't create a level 1 heading (`<h1>`) with `#` as this is generated automatically. Your first heading should _always_ be `##`
+Level 1 heading (`<h1>`) `#` san na thhahyo, hi automatic ahe. Tawhan ji pehrin heading _hamesha_ `##` huje
 
 - ❌
 
   ```md
-  # My Title
+  # Muhnjo Title
 
-  This is documentation for ...
+  Hi documentation ahe ...
 
   # Sub-Section
   ```
@@ -110,30 +110,30 @@ Don't create a level 1 heading (`<h1>`) with `#` as this is generated automatica
 - ✔
 
   ```md
-  This is documentation for ...
+  Hi documentation ahe ...
 
   ## Sub-Section
   ```
 
-### Use `Code` Snippets For Technical References
+### Istemaal karyo `Code` Snippets Technical References laye
 
-When writing a paragraph that contains function names, numbers, expressions or anything that's not standard written language, surround them with \`backticks\` like that. This makes it easier to separate language for describing things from references to technical elements such as function names and pieces of code.
+Jadhen tawhan paragraph likho tha jehn men  function names, numbers, expressions ya ka b shaye jeka nahe standard written language, unhe je chaudhaari \`backticks\` hanro hien. Iho asaan kare tho shayun samjhainr ain technical elements jien t function names ain pieces of code khe judaa karanr men.
 
 - ❌
 
-  > The fopen function will return a value with a tag of type File:, there is no problem on that line as the return value is being stored to a variable also with a tag of File: (note the cases are the same too). However on the next line the value 4 is added to the file handle. 4 has no tag [...]
+  > fopen function hamesha ka value return kando jehn jo tag type File: hundo, Inhen line main ko maslo nahe chho jo value b return kaje thi tag File: men (note case b saagyun ahe). Pr agin line men 4 jo ang add tho kaje file handle mn. 4 khe nahe ko tag [...]
 
 - ✔
 
-  > The `fopen` function will return a value with a tag of type `File:`, there is no problem on that line as the return value is being stored to a variable also with a tag of `File:` (note the cases are the same too). However on the next line the value `4` is added to the file handle. `4` has no tag
+  > `fopen` function hamesha ka value return kando jehn jo tag type `File:` hundo, Inhen line main ko maslo nahe chho jo value b return kaje thi tag `File:` men (note case b saagyun ahe). Pr agin line men `4` jo ang add tho kaje file handle mn. `4` khe nahe ko tag
 
-In the above example, `fopen` is a function name, not an English word, so surrounding it with `code` snippet markers helps distinguish it from other content.
+Mathen misaal men, `fopen` function name ahe, na e ko Sindhi jo akhr, poe unhe te `code` snippet hanrr san madad kandi inhe khe be content khan juda karanr men.
 
-Also, if the paragraph is referring to a block of example code, this helps the reader associate the words with the example.
+Ain punr, je ko paragraph kehn misaali code khe budhaye tho, hi madad kando parhanr ware khe akhran khe misaal san jornr men.
 
 ### Tables
 
-If a table has headings, they go in the top part:
+Je kehn table men headings ahin, Uho mathen hisse mn weendyu:
 
 - ❌
 
@@ -159,12 +159,6 @@ If a table has headings, they go in the top part:
   | 390-250 | Black Smoke                          |
   | < 250   | On fire (will explode seconds later) |
   ```
-
-### Cleaning Up
-
-The conversion likely won't be perfect. So you'll have to do a bit of manual cleanup. The formatting extensions listed above should help with that but you may still need to just spend some time doing manual work.
-
-If you don't have time, don't worry! Submit an unfinished draft and someone else can pick up where you left off!
 
 ## License Agreement
 
